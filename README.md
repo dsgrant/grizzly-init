@@ -1,4 +1,7 @@
 # Grizzly Init
 
-Tasklist
+*Tasklist*
+
+- [x] Init Init
+- [ ] Complete Init
 - [ ] Write Readme
