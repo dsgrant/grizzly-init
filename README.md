@@ -1,4 +1,4 @@
 # Grizzly Init
 
 Tasklist
-[ ] Write Readme
+- [ ] Write Readme
