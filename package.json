@@ -1,0 +1,8 @@
+{
+  "author": "Danny Grant <danny@dsgrant.com>",
+  "name": "grizzly-init",
+  "version": "1.0.0",
+  "description": "Project init using npm and gulp",
+  "license": "ISC",
+  "main": "index.js"
+}
