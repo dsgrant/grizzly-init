@@ -1,7 +1,13 @@
 'use strict';
 
-export default function(gulp, plugins, browserSync) {
+export default function(gulp, plugins, browserSync, config) {
 
-  browserSync.init();
+  return (callback) => {
 
-}
+    browserSync.init();
+
+    // No callback since we want this to stream
+
+  };
+
+};
