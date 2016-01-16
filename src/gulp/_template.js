@@ -1,14 +1,12 @@
 'use strict';
 
-import del from 'del';
-
 export default function(gulp, plugins, browserSync, config) {
 
   return (callback) => {
 
-    del([
-      config.directories.target
-    ]);
+    // function
+
+
 
     // Return callback for task Sequencer
     callback();

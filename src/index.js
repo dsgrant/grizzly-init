@@ -9,8 +9,10 @@ import { each } from 'lodash';
 
 import browserSyncPlugin from 'browser-sync';
 
-import clean from './gulp/clean';
 import browserSyncInit from './gulp/browserSync';
+import jadeCompile from './gulp/jade';
+import clean from './gulp/clean';
+
 
 
 // Export out our default function which will get passed in gulp in our gulpfile
@@ -34,6 +36,7 @@ export default function(oGulp) {
   };
 
   gulp.task('clean', 'Clean', wrap(clean));
+  gulp.task('jade', 'Compile Jade Files', wrap(jadeCompile));
   gulp.task('browserSync', 'Init Browser Sync', wrap(browserSyncInit));
 
   // Gather tasks from config file
