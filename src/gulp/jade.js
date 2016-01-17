@@ -10,7 +10,8 @@ export default function(gulp, plugins, browserSync, config) {
       .pipe(plugins.jade({
         pretty: true
       }))
-      .pipe(gulp.dest(path.join(config.directories.target)));
+      .pipe(gulp.dest(path.join(config.directories.target)))
+      .on('end', browserSync.reload);
 
     // No manual callback needed for pipes
 

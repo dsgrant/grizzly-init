@@ -3,6 +3,13 @@ const directories = {
   target: 'public'
 };
 
+const utils = {
+  // Set autoprefixer browser support
+  browserSupport: [
+    'last 2 versions'
+  ]
+}
+
 const server = {
   // When BrowserSync runs, what page to open
   // Can be true, local, external, ui, ui-external, or false
@@ -36,6 +43,7 @@ const tasks = {
   serve: [
     'clean',
     [
+      'sass',
       'jade'
     ],
     [
@@ -46,6 +54,7 @@ const tasks = {
 
 export default {
   directories,
+  utils,
   server,
   tasks
 };

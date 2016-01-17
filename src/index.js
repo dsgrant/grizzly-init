@@ -10,7 +10,8 @@ import { each } from 'lodash';
 import browserSyncPlugin from 'browser-sync';
 
 import browserSyncInit from './gulp/browserSync';
-import jadeCompile from './gulp/jade';
+import jade from './gulp/jade';
+import sass from './gulp/sass';
 import clean from './gulp/clean';
 
 
@@ -22,7 +23,7 @@ export default function(oGulp) {
   const browserSync = browserSyncPlugin.create();
 
   // Load all gulp plugins based on their names
-  // EX: gulp-copy -> copy
+  // gulp-copy -> plugins.copy
   const plugins = gulpLoadPlugins();
 
   // load gulp and provide gulp help task
@@ -36,7 +37,8 @@ export default function(oGulp) {
   };
 
   gulp.task('clean', 'Clean', wrap(clean));
-  gulp.task('jade', 'Compile Jade Files', wrap(jadeCompile));
+  gulp.task('jade', 'Compile Jade Files', wrap(jade));
+  gulp.task('sass', 'Compile Jade Files', wrap(sass));
   gulp.task('browserSync', 'Init Browser Sync', wrap(browserSyncInit));
 
   // Gather tasks from config file
