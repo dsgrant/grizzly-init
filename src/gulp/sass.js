@@ -10,11 +10,13 @@ export default function(gulp, plugins, browserSync, config) {
     var browserSupport = config.utils.browserSupport || ['last 2 versions'];
 
     return gulp.src(path.join(config.directories.source, '**/*.scss'))
+      .pipe(plugins.sourcemaps.init())
       .pipe(plugins.sass({
         outputStyle: 'expanded',
         precision: 10
       }))
       .on('error', plugins.sass.logError)
+      .pipe(plugins.sourcemaps.write())
       .pipe(plugins.postcss([ autoprefixer({ browsers: browserSupport }) ]))
       .pipe(gulp.dest(path.join(config.directories.target)))
       .pipe(browserSync.stream({match: '**/*.css'}));
