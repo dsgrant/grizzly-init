@@ -7,6 +7,10 @@
 
 ### Captains Log:
 
+> Where are the watchers?
+
+> Found some pocket lint...
+
 > Place some watchers...
 
 > X marks the spot, sourcemaps now working for js and sass

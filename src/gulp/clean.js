@@ -11,8 +11,7 @@ export default function(gulp, plugins, browserSync, config) {
       path.join(config.directories.target)
     ], callback);
 
-    // Return callback for task Sequencer
-    // callback();
+    // callback returned via del
 
   };
 

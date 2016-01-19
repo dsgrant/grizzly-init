@@ -38,7 +38,6 @@ export default function(gulp, plugins, browserSync, config) {
       .pipe(gulp.dest(path.join(config.directories.target, config.directories.scripts)))
       .pipe(browserSync.stream());
 
-
     // No manual callback needed for pipes
 
   };
