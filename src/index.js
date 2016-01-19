@@ -16,6 +16,7 @@ import eslint from './gulp/eslint';
 import babel from './gulp/babel';
 import jade from './gulp/jade';
 import sass from './gulp/sass';
+import watch from './gulp/watch';
 
 
 // Export out our default function which will get passed in gulp in our gulpfile
@@ -59,6 +60,8 @@ export default function(locGulp, locConfig = {}) {
   gulp.task('babel', 'Compile Babel Files', wrap(babel));
   gulp.task('jade', 'Compile Jade Files', wrap(jade));
   gulp.task('sass', 'Compile Sass Files', wrap(sass));
+
+  gulp.task('watch', 'Watchers', wrap(watch));
 
 
   // Gather tasks from config file

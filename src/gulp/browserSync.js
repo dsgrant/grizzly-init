@@ -13,6 +13,8 @@ export default function(gulp, plugins, browserSync, config) {
       notify: config.server.notify || true
     });
 
+    callback();
+
     // No callback since we want this to stream
 
   };

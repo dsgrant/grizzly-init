@@ -97,7 +97,8 @@ const tasks = {
       'sass',
       'jade'
     ],
-    'browserSync'
+    'browserSync',
+    'watch'
   ]
 };
 
