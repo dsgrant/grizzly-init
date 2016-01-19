@@ -1,6 +1,15 @@
 const directories = {
   source: 'src',
-  target: 'public'
+  target: 'public',
+  scripts: 'scripts',
+  styles: 'styles',
+  pages: 'pages',
+  modules: '_modules'
+};
+
+const entry = {
+  scripts: 'main.js',
+  styles: 'main.scss'
 };
 
 const utils = {
@@ -8,13 +17,14 @@ const utils = {
   browserSupport: [
     'last 2 versions'
   ]
-}
+};
 
 const server = {
   // When BrowserSync runs, what page to open
   // Can be true, local, external, ui, ui-external, or false
   // default: local    >> localhost
-  open: 'local',
+  // open: 'local',
+  open: false,
 
   // Which directory to serve files from
   // default: target directory
@@ -28,7 +38,7 @@ const server = {
   // default: true
   notify: true
 
-}
+};
 
 // This uses runSequence so
 // [
@@ -43,17 +53,17 @@ const tasks = {
   serve: [
     'clean',
     [
+      'babel',
       'sass',
       'jade'
     ],
-    [
-      'browserSync'
-    ]
+    'browserSync'
   ]
 };
 
 export default {
   directories,
+  entry,
   utils,
   server,
   tasks

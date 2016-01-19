@@ -10,10 +10,10 @@ import { each } from 'lodash';
 import browserSyncPlugin from 'browser-sync';
 
 import browserSyncInit from './gulp/browserSync';
+import clean from './gulp/clean';
+import babel from './gulp/babel';
 import jade from './gulp/jade';
 import sass from './gulp/sass';
-import clean from './gulp/clean';
-
 
 
 // Export out our default function which will get passed in gulp in our gulpfile
@@ -36,10 +36,12 @@ export default function(oGulp) {
     return fn(gulp, plugins, browserSync, config);
   };
 
-  gulp.task('clean', 'Clean', wrap(clean));
-  gulp.task('jade', 'Compile Jade Files', wrap(jade));
-  gulp.task('sass', 'Compile Jade Files', wrap(sass));
   gulp.task('browserSync', 'Init Browser Sync', wrap(browserSyncInit));
+  gulp.task('clean', 'Clean', wrap(clean));
+  gulp.task('babel', 'Compile Babel Files', wrap(babel));
+  gulp.task('jade', 'Compile Jade Files', wrap(jade));
+  gulp.task('sass', 'Compile Sass Files', wrap(sass));
+
 
   // Gather tasks from config file
   // Run through each loop and sequence

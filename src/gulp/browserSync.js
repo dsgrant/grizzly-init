@@ -5,7 +5,7 @@ export default function(gulp, plugins, browserSync, config) {
   return (callback) => {
 
     browserSync.init({
-      open: config.server.open || 'local',
+      open: config.server.open,
       server: {
         baseDir: config.server.baseDir || config.directories.target
       },
