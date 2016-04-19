@@ -4,7 +4,7 @@ const directories = {
   scripts: 'scripts',
   styles: 'styles',
   pages: 'pages',
-  modules: '_modules'
+  components: '_components'
 };
 
 const entry = {

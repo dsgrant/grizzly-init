@@ -7,6 +7,8 @@
 
 ### Captains Log:
 
+> Watchers found...
+
 > Where are the watchers?
 
 > Found some pocket lint...

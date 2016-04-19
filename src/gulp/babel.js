@@ -30,7 +30,7 @@ export default function(gulp, plugins, browserSync, config) {
           modulesDirectories: [
             config.directories.source,
             config.directories.scripts,
-            config.directories.modules,
+            config.directories.components,
             'node_modules'
           ]
         }
